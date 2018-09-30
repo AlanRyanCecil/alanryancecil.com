@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Megrim" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Audiowide|Inconsolata:700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            rel="stylesheet">
+            <link rel="stylesheet" href="resources/css/main.css">
+            <title>Mission to Mars</title>
+        </head>
+        <body>
+            <div class="bg"></div>
+            <div class="bg-overlay"></div>
+            <div class="mars-header clearfix">
+                <h1 class="display-1 float-left mission-head">Mission to Mars</h1>
+                <a href="/mars/scrape" id="btn-data" class="btn float-sm-right">Refresh Data</a>
+            {% block modals %}{% endblock%}
+        </div>
+        <div class="big-container">
+            {% block content %}{% endblock %}
+        </div>
+        {% block twoohfour %}{% endblock %}
+        <script
+        src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    </body>
+</html>

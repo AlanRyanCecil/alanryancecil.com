@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, abort, url_for
+from flask import Blueprint, render_template, abort
 from jinja2 import TemplateNotFound
 
 aliens = Blueprint('aliens', __name__,
