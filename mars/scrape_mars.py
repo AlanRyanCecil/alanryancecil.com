@@ -5,7 +5,8 @@ from bs4 import BeautifulSoup as bs
 from splinter.exceptions import ElementDoesNotExist
 import re
 
-executable_path = {'executable_path': '/usr/local/bin/chromedriver'}
+# executable_path = {'executable_path': '/usr/local/bin/chromedriver'}
+executable_path = {'executable_path': '/home/alanryancecil/anaconda3/envs/alanryancecil.env/bin/chromedriver'}
 
 
 def scrape():
