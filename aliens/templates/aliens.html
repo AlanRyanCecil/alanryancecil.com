@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Alien Encounters</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
+        <link rel="stylesheet" href="resource/css/checkbox.css">
+        <link rel="stylesheet" href="resource/css/main.css">
+    </head>
+    <body>
+        <hr>
+        <div class="header-container row">
+            <div class="col-xs-2"></div>
+            <h1 class="header col-xs-8">Alien Encounters</h1>
+        </div>
+        <hr>
+        <div class="container">
+            <div class="row">
+                <form autocomplete="off" id="main-form">
+                    <div class="row">
+                        <div class="col-sm-7">
+                            <div class="row">
+                                <div class="form-group col-sm-6">
+                                    <label for="city-input">City</label>
+                                    <input autocomplete="nope" type="text" class="form-control" id="city-input" placeholder="comma separated cities">
+                                </div>
+                                <div class="form-group col-sm-4">
+                                    <label for="state-input">State</label>
+                                    <input type="text" class="form-control" id="state-input" placeholder="accepts multiple">
+                                </div>
+                                <div id="country-checks" class="form-group col-sm-2">
+                                    <label>Country</label>
+                                    <br>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-sm-6">
+                                    <label for="date-input">Date</label>
+                                    <input type="date" class="form-control" id="date-input">
+                                </div>
+                                <div class="form-group col-sm-6">
+                                    <label for="duration-input">Duration</label>
+                                    <input type="number" class="form-control" id="duration-input" placeholder="minutes unless noted as other">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-sm-12">
+                                    <label for="keyword-input">Comments</label>
+                                    <input type="text" class="form-control" id="keyword-input" placeholder="keywords">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-1 col-md-2"></div>
+                        <div class="col-sm-3 form-group ">
+                            <div id="shape-form" class="row">
+                                <div class="col-sm-12">
+                                    <input type="checkbox" class="cstm-checkbox" id="all-shapes">
+                                    <label class="cstm-label" for="all-shapes">All Shapes</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                </form>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div id="table-area">
+                        <table id="ufo-table" class="table">
+                            <thead>
+                                <tr id="sort-links" >
+                                    <th class="table-head">Date</th>
+                                    <th class="table-head">Country</th>
+                                    <th class="table-head">State</th>
+                                    <th class="table-head">City</th>
+                                    <th class="table-head">Shape</th>
+                                    <th class="table-head">Duration</th>
+                                    <th class="table-head">Comments</th>
+                                </tr>
+                            </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <hr>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+    <script src="resource/js/data.js"></script>
+    <script src="resource/js/utilities.js"></script>
+    <script src="resource/js/app.js"></script>
+</body>
+</html>

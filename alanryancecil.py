@@ -1,5 +1,8 @@
 from flask import Flask, render_template
+from aliens.aliens import aliens
+
 app = Flask(__name__)
+app.register_blueprint(aliens)
 
 
 @app.route('/')
@@ -7,10 +10,5 @@ def hello():
     return render_template('index.html')
 
 
-@app.route('/aliens')
-def aliens():
-    return render_template('aliens.html')
-
 if __name__ == "__main__":
-    app.run()
-    # app.run(host='0.0.0.0')
+    app.run(debug=True)

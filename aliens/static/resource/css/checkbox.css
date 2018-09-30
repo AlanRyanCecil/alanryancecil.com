@@ -1,0 +1,35 @@
+
+input[type=text], input[type=date], input[type=number] {
+    font-size: 1em;
+    color: #8DFF5F;
+    background-color: #22221B;
+}
+
+input::placeholder {
+    color: #8DFF5F !important;
+}
+
+.cstm-checkbox {
+    position: absolute;
+    clip: rect(0 0 0 0);
+}
+
+.cstm-checkbox, .cstm-label {
+    padding-left: 20px;
+    line-height: 15px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.cstm-checkbox:checked + label.cstm-label {
+    background-position: 0 -15px;
+}
+
+.cstm-label {
+    margin: 0.45em;
+    margin-bottom: 0;
+    font-size: 1em;
+    background-image: url('../images/x-green.png');
+}
