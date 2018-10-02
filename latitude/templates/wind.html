@@ -1,0 +1,31 @@
+{% extends 'latitude_base.html' %}
+{% block content %}
+    <div class="big-container">
+        <div class="row">
+            <div class="col-lg-7 col-md-12">
+                <h1 class="display-5">Wind Speed</h1>
+                <img class="img-fluid" src="resource/img/wind speed(mph)_by_latitude.png" alt="temperature">
+                <p class="lead">Wind speed seems to be independent of latitude.</p>
+                <p>Not a very windy day </p>
+            </div>
+            <div class="col-lg-5 col-md-12">
+                <h1 class="display-5">Visualizations</h1>
+                <div class="row">
+                    <div class="vis-thumb col-lg-6 col-3">
+                        <a href="latitude-temperature"><img class="img-fluid" src="resource/img/temperature(f)_by_latitude.png"></a>
+                    </div>
+                    <div class="vis-thumb col-lg-6 col-3">
+                        <a href="latitude-humidity"><img class="img-fluid" src="resource/img/humidity_by_latitude.png"></a>
+                    </div>
+                    <div class="vis-thumb col-lg-6 col-3">
+                        <a href="latitude-cloudiness"><img class="img-fluid" src="resource/img/cloudiness_by_latitude.png"></a>
+                    </div>
+                    <div class="vis-thumb col-lg-6 col-3">
+                        <a href="latitude-wind"><img class="img-fluid selection" src="resource/img/wind speed(mph)_by_latitude.png"></a>
+                    </div>
+                </div>
+                <p class="text-right">click any plot to get an in depth analysis</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}

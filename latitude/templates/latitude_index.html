@@ -1,0 +1,33 @@
+{% extends 'latitude_base.html' %}
+{% block content %}
+    <div class="big-container">
+        <div class="row">
+            <div class="col-lg-7 col-md-12">
+                <h1 class="display-5">Summary:</h1>
+                <img class="img-fluid" src="resource/img/temperature(f)_by_latitude.png" alt="temperature">
+                <p class="lead">Latitude Analysis:</p>
+                <p>
+                    The purpose of this project was to analyze how weather changes as you get closer to the equator. To accomplish this analysis, we first pulled data from the OpenWeatherMap API to assemble a dataset on over 500 cities. After assembling the dataset, we used Matplotlib to plot various aspects of the weather vs. latitude. Factors we looked at included: temperature, cloudiness, wind speed, and humidity. This site provides the source data and visualizations created as part of the analysis, as well as explanations and descriptions of any trends and correlations witnessed.
+                </p>
+            </div>
+            <div class="col-lg-5 col-md-12">
+                <h1 class="display-5">Visualizations</h1>
+                <div class="row">
+                    <div class="vis-thumb col-lg-6 col-3">
+                        <a href="latitude-temperature"><img class="img-fluid" src="resource/img/temperature(f)_by_latitude.png"></a>
+                    </div>
+                    <div class="vis-thumb col-lg-6 col-3">
+                        <a href="latitude-humidity"><img class="img-fluid" src="resource/img/humidity_by_latitude.png"></a>
+                    </div>
+                    <div class="vis-thumb col-lg-6 col-3">
+                        <a href="latitude-cloudiness"><img class="img-fluid" src="resource/img/cloudiness_by_latitude.png"></a>
+                    </div>
+                    <div class="vis-thumb col-lg-6 col-3">
+                        <a href="latitude-wind"><img class="img-fluid" src="resource/img/wind speed(mph)_by_latitude.png"></a>
+                    </div>
+                </div>
+                <p class="text-right">click any plot to get an in depth analysis</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}

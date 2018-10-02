@@ -1,0 +1,32 @@
+@font-face {
+    font-family: 'Digital Numbers';
+    src: url('digital-7.ttf')
+}
+
+[ng-cloak] {
+    display: none;
+}
+
+body {
+    background-color: #487AA4;
+    font-family: roboto;
+}
+
+#keys {
+    position: absolute;
+    left: 8vh;
+    bottom: 8vh;
+    border-radius: 0.5vh;
+    font-size: 2vh;
+    color: #EED;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+p {
+    margin: 0;
+}
+
+#just-click {
+    text-align: center;
+    font-size: 1.6vh;
+}

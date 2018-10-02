@@ -1,0 +1,66 @@
+body {
+    font-family: 'Overpass Mono', monospace;
+    background-color: #D8D5C2;
+}
+
+hr {
+    height: 6px;
+    background: #FFF url('../img/slash.png');
+    border: 0;
+}
+
+.big-container {
+    padding: 1em 4em 0 4em;
+}
+
+.nav-title {
+    color: #333;
+    background-color: #D7E7EA;
+    padding: 0.2em;
+    border-radius: 0.1em;
+    transition: width 0.5s ease-in-out;
+    width: 100%;
+}
+
+@media (max-width: 650px) {
+    .nav-title {
+        width: 49%;
+        transition: width 0.5s ease-in-out;
+    }
+}
+
+.navbar-custom {
+    padding: 1.5em;
+    margin-bottom: 1em;
+    background-color: #333 !important;
+}
+
+.nav-link {
+    color: #F4F9FE;
+}
+
+.nav-link:hover {
+    color: #86B3D3;
+}
+
+.material-icons {
+    color: #F4F9FE;
+}
+
+img {
+    margin-bottom: 0.5em;
+}
+
+.selection {
+    border: 0.2em dashed #777;
+}
+
+.table-custom {
+    margin-top: 3em;
+    background-color: #FFF;
+}
+
+.thead-custom {
+    color: #F4F9FE;
+    background-color: #333;
+}

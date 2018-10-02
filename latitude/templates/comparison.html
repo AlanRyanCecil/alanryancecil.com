@@ -1,0 +1,23 @@
+{% extends 'latitude_base.html' %}
+{% block content %}
+    <div class="big-container">
+        <h1 class="display-5">Comparison:</h1>
+        <hr>
+        <div class="row">
+            <div class="vis-thumb col-lg-6 col-12">
+                <a href="latitude-temperature"><img class="img-fluid" src="resource/img/temperature(f)_by_latitude.png"></a>
+            </div>
+            <div class="vis-thumb col-lg-6 col-12">
+                <a href="latitude-humidity"><img class="img-fluid" src="resource/img/humidity_by_latitude.png"></a>
+            </div>
+            <div class="vis-thumb col-lg-6 col-12">
+                <a href="latitude-cloudiness"><img class="img-fluid" src="resource/img/cloudiness_by_latitude.png"></a>
+            </div>
+            <div class="vis-thumb col-lg-6 col-12">
+                <a href="latitude-wind"><img class="img-fluid" src="resource/img/wind speed(mph)_by_latitude.png"></a>
+            </div>
+        </div>
+        <hr>
+        <p class="lead text-right">click any plot to get an in depth analysis</p>
+    </div>
+{% endblock %}
