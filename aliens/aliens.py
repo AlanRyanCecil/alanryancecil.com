@@ -2,7 +2,7 @@ from flask import Blueprint, render_template, abort
 from jinja2 import TemplateNotFound
 
 aliens = Blueprint('aliens', __name__,
-                   template_folder='templates', static_folder='static/resource')
+                   template_folder='templates', static_folder='static/alien_static')
 
 
 @aliens.route('/aliens')
