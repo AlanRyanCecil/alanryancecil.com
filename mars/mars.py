@@ -1,7 +1,7 @@
 from flask import Blueprint, jsonify, redirect, render_template
 import pymongo
 
-from mars.scrape_mars import scrape
+from mars.scrape.scrape_mars import scrape
 
 client = pymongo.MongoClient('mongodb://localhost:27017')
 db = client.mars_db
