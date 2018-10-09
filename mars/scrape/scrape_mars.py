@@ -6,8 +6,6 @@ from splinter.exceptions import ElementDoesNotExist
 import re
 
 executable_path = {'executable_path': '/usr/local/bin/chromedriver'}
-# executable_path = {'executable_path': '/home/alanryancecil/anaconda3/envs/alanryancecil.env/bin/chromedriver'}
-
 
 def scrape():
     browser = Browser('chrome', **executable_path, headless=True)
