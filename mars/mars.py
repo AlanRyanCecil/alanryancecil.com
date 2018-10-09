@@ -9,7 +9,7 @@ collection = db.mars
 
 
 mars = Blueprint('mars', __name__,
-    template_folder='templates', static_folder='static/resources')
+    template_folder='mars_templates', static_folder='mars_static')
 
 
 @mars.route('/mars')
