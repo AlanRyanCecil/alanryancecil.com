@@ -3,9 +3,12 @@ import pandas as pd
 from splinter import Browser
 from bs4 import BeautifulSoup as bs
 from splinter.exceptions import ElementDoesNotExist
+from pprint import pprint
+import pymongo
 import re
 
 executable_path = {'executable_path': '/usr/local/bin/chromedriver'}
+
 
 def scrape():
     browser = Browser('chrome', **executable_path, headless=True)
@@ -82,3 +85,13 @@ def scrape():
         'facts_source': mars_facts_source,
         'hemisphere_source': hemisphere_source,
     }
+
+
+def scrape_to_db():
+    data = scrape()
+    client = pymongo.MongoClient('mongodb://localhost:27017')
+    db = client.mars_db
+    collection = db.mars
+    collection.drop()
+    collection.insert_one(data)
+    pprint(data)
