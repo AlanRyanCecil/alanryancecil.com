@@ -22,8 +22,8 @@ def home():
 
 @mars.route('/mars/scrape')
 def call_scrape():
-    collection.drop()
-    collection.insert_one(scrape())
+    # collection.drop()
+    # collection.insert_one(scrape())
     return redirect('/mars', code=302)
 
 if __name__ == '__main__':
