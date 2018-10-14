@@ -4,7 +4,7 @@
 }
 
 hr {
-    border: 0.3vw solid gray;
+    border: 0.3vw solid #777;
 }
 
 .heading > span {
@@ -14,7 +14,7 @@ hr {
 
 #plot {
     margin-left: 8%;
-    margin-bottom: 8%;
+    margin-bottom: 4%;
 }
 
 text {
@@ -55,4 +55,14 @@ text {
 
 a:hover {
   text-decoration-color: red;
+}
+
+.articles {
+    margin-bottom: 6%;
+}
+
+footer {
+    height: 8vh;
+    margin-top: 8vh;
+    background-color: #777;
 }
