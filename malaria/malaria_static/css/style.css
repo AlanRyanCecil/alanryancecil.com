@@ -1,0 +1,114 @@
+html {
+    font-family: 'Oxygen', sans-serif !important;
+    text-align: center;
+}
+
+.header {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 8vh;
+    background-color: #82C2E0;
+    z-index: 10000;
+}
+
+#head-space {
+    height: 8vh;
+}
+
+#page-title {
+    text-align: center;
+    padding-top: 0.5em;
+}
+
+.btn {
+    margin-top: 2vh;
+}
+
+.year-control {
+    text-align: center;
+    /* margin-top: 8vh; */
+}
+
+.map-heading {
+    margin-top: 8vh;
+    text-align: center;
+}
+
+hr {
+    border: 0.1em solid #333;
+}
+
+br {
+    margin: 18vh;
+}
+
+#map-title {
+    margin-top: 3vh;
+}
+
+#world {
+    height: 30vh;
+    margin-top: 3vh;
+}
+
+#world-wide {
+    height: 40vh;
+}
+
+#gdp-scatter {
+    height: 40vh;
+}
+
+#top-countries {
+    margin: 8vh;
+}
+
+.plot-text {
+    padding-top: 10vh;
+}
+
+#year-controller {
+    margin-top: 1vh;
+    text-align: center;
+    background-color: #9EC544;
+}
+
+.year-sel {
+    cursor: pointer;
+}
+
+.year{
+    /* font-size: 1vh; */
+    margin: 0px;
+    color: white;
+}
+
+.year-display {
+}
+
+.line {
+    fill: none;
+    stroke: orange;
+    stroke-width: 2px;
+}
+
+.leaflet-container {
+    background-color: #E9E5D1;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.leaflet-popup-content-wrapper {
+    border-radius: 0.2em;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.pophr {
+    border: 0.1em solid #FFF;
+}
+footer {
+    height: 8vh;
+    text-align: center;
+    background-color: #82C2E0;
+}

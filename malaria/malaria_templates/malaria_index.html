@@ -1,0 +1,52 @@
+{% extends 'malaria_base.html' %}
+{% block content %}
+<div class="row">
+    <div class="col-md-6">
+        <h3 id="map-title">Malaria Cases per 100,000 Population</h3>
+        <div id="world"></div>
+    </div>
+    <div class="col-md-6">
+        <div id="bar-chart"></div>
+    </div>
+    <div class="col-md-12">
+        <div id="gdp-scatter"></div>
+    </div>
+    <div id="year-controller" class="col-md-12">
+        <div class="year-control">
+            <p class="year"> <span class="year-sel year-minus">-</span> <span class="year-display">2006</span> <span class="year-sel year-plus">+</span> </p>
+        </div>
+    </div>
+    </div>
+    <div id="highest"></div>
+    <div class="row">
+        <div class="col-md-4 plot-text">
+            <h3>There are high economic costs of malaria</h3>
+            <p>Okorosobo et al. (2013)10 estimate that the malaria “penalty” to GDP ranges from 0.41% of GDP in Ghana to 8.9% of GDP in Chad, all of which could be regained following elimination of malaria. Complete eradication of the disease would increase GDP in Uganda by 50 million USD. Azemar and Desbordes (2009)11 find that in the median sub-Saharan African country, foreign direct investment could increase by as much as one-third as a result of malaria and HIV eradication, slightly more than one-half of this is attributed to malaria.</p>
+        </div>
+        <div class="col-md-8">
+            <div id="top-countries"></div>
+        </div>
+    </div>
+    <!-- <h1 class="map-heading"></h1> -->
+    <!-- <h1 class="map-heading">Highest Burden Countries</h1> -->
+    <div class="row">
+        <div id="world-wide" class="col-md-6"></div>
+        <div id="world-wide-text" class="col-md-6 plot-text">
+            <h3>Malaria Cases World Wide</h3>
+            <p>In the visualisations below we provide estimates of the total number of deaths from the World Health Organization (WHO) from 2000 to 2015, and the Institute of Health Metrics and Evaluation (IHME), Global Burden of Disease (GBD) from 1990 to 2016.</p>
+        </div>
+    </div>
+    <div id="stacked"></div>
+    <h3 id="charity-list">Charities</h3>
+    <hr>
+    <div class="row">
+        <div class="col-md-6">
+            {% for charity in charities %}
+                <a href="{{ charity['link'] }}" target="_blank"><p>{{ charity['text'] }}</p></a>
+            {% endfor %}
+        </div>
+        <div class="col-md-6">
+            <p></p>
+        </div>
+    </div>
+{% endblock %}
