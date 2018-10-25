@@ -65,7 +65,7 @@ function buildChart() {
 
 }
 
-d3.json('/malaria').then(response => {
+d3.json('/mapping-malaria/malaria').then(response => {
     data = response.filter(x => x[cases] > 100);
     buildChart();
 });

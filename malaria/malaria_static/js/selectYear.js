@@ -39,7 +39,7 @@ d3.select('.year-plus').on('click', function() {
     playForward();
 });
 
-$('.btn').on('click', function(event) {
+$('.scroll-anchor').on('click', function(event) {
     event.preventDefault();
     let hash = this.hash;
     if (hash !== '') {

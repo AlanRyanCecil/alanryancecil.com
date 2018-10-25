@@ -1,6 +1,6 @@
 'use strict';
 var scatter = function() {
-d3.json('/malaria').then(response => {
+d3.json('/mapping-malaria/malaria').then(response => {
     let cases = 'Malaria cases/100,000 pop.';
     let data = response.filter(x => x[cases] > 100 && x.Year === year);
     let trace = {

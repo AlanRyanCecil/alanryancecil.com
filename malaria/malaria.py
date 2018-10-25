@@ -22,7 +22,7 @@ def home():
     return render_template('malaria_index.html', charities=charities)
 
 
-@malaria.route('/malaria')
+@malaria.route('/mapping-malaria/malaria')
 def malariadata():
     df = pd.read_csv('malaria/malaria_static/data/Malaria_data_file.csv')
     data = []
@@ -31,7 +31,7 @@ def malariadata():
     return jsonify(data)
 
 
-@malaria.route('/top/<number>')
+@malaria.route('/mapping-malaria/top/<number>')
 def top(number):
     cases = 'Malaria cases/100,000 pop.'
     df = pd.read_csv('malaria/malaria_static/data/Malaria_data_file.csv')
@@ -44,7 +44,7 @@ def top(number):
     return jsonify(data)
 
 
-@malaria.route('/coordinates')
+@malaria.route('/mapping-malaria/coordinates')
 def coordinates():
     df = pd.read_csv('malaria/malaria_static/data/coordinates.csv')
     df = df.dropna()

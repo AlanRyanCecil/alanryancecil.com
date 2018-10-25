@@ -67,7 +67,7 @@ function buildChart() {
     });
 }
 
-d3.json('/top/5').then(data => {
+d3.json('/mapping-malaria/top/5').then(data => {
     console.log(data);
     stackData = d3.nest()
         .key(d => d.Entity)

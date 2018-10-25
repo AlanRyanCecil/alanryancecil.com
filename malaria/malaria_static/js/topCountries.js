@@ -1,7 +1,7 @@
 'use strict';
 
 (function() {
-d3.json('/top/5').then(data => {
+d3.json('/mapping-malaria/top/5').then(data => {
     let cases = 'Malaria cases/100,000 pop.';
     let plotData = [];
     data = d3.nest()

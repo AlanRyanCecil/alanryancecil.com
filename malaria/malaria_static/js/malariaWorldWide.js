@@ -25,7 +25,7 @@ let layout = {
     },
 }
 
-d3.json('/malaria').then(data => {
+d3.json('/mapping-malaria/malaria').then(data => {
     let years = d3.nest()
         .key(d => d.Year)
         .entries(data);
