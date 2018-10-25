@@ -19,7 +19,8 @@ d3.json('/mapping-malaria/top/5').then(data => {
     let layout = {
         title: 'Highest Burden Countries',
         titlefont: {
-            size: 32,
+            size: 28,
+            family: 'Oxygen',
         },
     };
 

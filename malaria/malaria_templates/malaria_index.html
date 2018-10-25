@@ -26,7 +26,7 @@
     <div id="highest"></div>
     <div class="row">
         <div class="col-md-4 plot-text">
-            <h3>The Economic Costs of Malaria</h3>
+            <h3>Economic Costs of Malaria</h3>
             <p>Malaria “penalty” to GDP ranges from 0.41% of GDP in Ghana to 8.9% of GDP in Chad, all of which could be regained following elimination of malaria. Complete eradication of diseases would increase GDP in Uganda by 50M USD. Azemar and Desbordes find that in the median sub-Saharan African county, foreign direct investments could increase by as much as one-third as a result of malaria and HIV eradication, slightly more than one-half of this is attributed to malaria.</p>
         </div>
         <div class="col-md-8">
@@ -40,13 +40,23 @@
             <p>Nearly half of the world's population is at risk of contracting malaria. In 2015, there were roughly 212 million malaria cases and an estimated 429,000 malaria deaths. Increased prevention and control measures have led to a 29% reduction in malaria mortality rates globally since 2010.</p>
         </div>
     </div>
-    <div id="stacked"></div>
-    <h3 id="charity-list">Charities</h3>
+    <br id="charity-list">
+    <!--     <h3 class="section-heading">Give Well</h3>
     <hr>
     <div class="row">
         <div class="col-md-6">
+            <h3>High impact giving opportunities that are supported by in-depth charity research</h3>
+            <p>GiveWell is a nonprofit dedicated to finding outstanding giving opportunities through in-depth analysis. Thousands of hours of research have gone into finding our top-rated charities. They’re evidence-backed, thoroughly vetted, and underfunded.<a href="https://www.givewell.org" target="_blank" class="btn btn-info text-btn">Learn More</a></p>
+        </div>
+    </div>
+    -->    <h3 class="section-heading">International NGOs Fighting Malaria
+    <a class="learn-btn btn btn-info" target="_blank" href="https://www.raptim.org/11-international-ngos-fighting-malaria/">Learn More</a>
+    </h3>
+    <hr>
+    <div class="row">
+        <div class="row col-md-12">
             {% for charity in charities %}
-                <a href="{{ charity['link'] }}" target="_blank"><p>{{ charity['text'] }}</p></a>
+                <a class="col-md-6" href="{{ charity['link'] }}" target="_blank"><p>{{ charity['text'] }}</p></a>
             {% endfor %}
         </div>
         <div class="col-md-6">

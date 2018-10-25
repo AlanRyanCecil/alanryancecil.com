@@ -24,7 +24,7 @@ var drawBars;
         let layout = {
             title: 'Top Five Countries',
             titlefont: {
-                size: 24,
+                size: 28,
                 family: 'Oxygen',
             },
             xaxis: {
