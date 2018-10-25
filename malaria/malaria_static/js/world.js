@@ -1,9 +1,21 @@
 'use strict';
+
+var lightMap = L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    maxZoom: 18,
+    id: 'mapbox.light',
+    accessToken: API_KEY
+}),
+drawWorld, geojson;
+
+lightMap.keep = true;
+
 var world = L.map('world', {
     center: [3, 16.845402],
     zoom: 2,
-}),
-drawWorld, geojson;
+    layers: [lightMap],
+});
+
 (function() {
 
     function hardCases(d) {
@@ -11,12 +23,6 @@ drawWorld, geojson;
     }
 
 
-    let lightMap = L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
-        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-        maxZoom: 18,
-        id: 'mapbox.light',
-        accessToken: API_KEY
-    });
     var africa = 'malaria_static/json/africa_geo.json';
     let world_json = 'malaria_static/json/world.geojson';
     var geoStyle = {
@@ -91,7 +97,6 @@ drawWorld, geojson;
 
                 geojson = L.choropleth(geoData, {
                     valueProperty: x => getValueProperty(x, countryLookUp),
-                    // scale: ["#07F", "#F00"],
                     scale: ["#39F", "#F00"],
                     steps: 5,
                     mode: "q",
@@ -127,10 +132,11 @@ drawWorld, geojson;
                     }
                 });
                 world.eachLayer(function(layer) {
-                    world.removeLayer(layer);
+                    if (!layer.keep) {
+                        world.removeLayer(layer);
+                    }
                 });
                 world.addLayer(geojson);
-                world.addLayer(lightMap);
                 let baseMaps = {
                 };
                 let overlayMaps = {

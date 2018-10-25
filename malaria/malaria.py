@@ -1,7 +1,5 @@
-from flask import Blueprint, request, jsonify, render_template
+from flask import Blueprint, jsonify, render_template
 import pandas as pd
-from bs4 import BeautifulSoup
-import requests
 import pymongo
 
 from .scrape_info import scrape_charity_data

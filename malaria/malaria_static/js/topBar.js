@@ -49,5 +49,3 @@ var drawBars;
     });
     drawBars();
 })();
-
-

@@ -1,7 +1,7 @@
 'use strict';
 
 let year = 2006;
-let yearDisplay = d3.select('.year-display');
+let yearDisplay = $('#year-display');
 let forward, backward;
 
 function playForward() {
@@ -26,7 +26,7 @@ function playBack() {
     }, 1000)
 }
 
-d3.select('.header').on('click', function() {
+yearDisplay.on('click', function() {
     clearInterval(forward);
     clearInterval(backward);
 });

@@ -1,6 +1,5 @@
 body {
     font-family: 'Oxygen', sans-serif;
-    /* font-weight: normal; */
 }
 
 .header {
@@ -74,7 +73,6 @@ br {
     color: white;
     font-size: 2em;
     text-align: center;
-    /* line-height: 1.5; */
     border-radius: 0.1em;
     background-color: #9EC544;
 }
@@ -113,6 +111,7 @@ br {
 .pophr {
     border: 0.1em solid #333;
 }
+
 footer {
     height: 8vh;
     text-align: center;
