@@ -1,6 +1,6 @@
-html {
-    font-family: 'Oxygen', sans-serif !important;
-    text-align: center;
+body {
+    font-family: 'Oxygen', sans-serif;
+    /* font-weight: normal; */
 }
 
 .header {
@@ -21,13 +21,13 @@ html {
     padding-top: 0.5em;
 }
 
-.btn {
-    margin-top: 2vh;
+
+#page-title > h1 {
+    font-weight: bold;
 }
 
-.year-control {
-    text-align: center;
-    /* margin-top: 8vh; */
+.btn {
+    margin-top: 2vh;
 }
 
 .map-heading {
@@ -45,6 +45,7 @@ br {
 
 #map-title {
     margin-top: 3vh;
+    text-align: center;
 }
 
 #world {
@@ -70,21 +71,26 @@ br {
 
 #year-controller {
     margin-top: 1vh;
+    color: white;
+    font-size: 2em;
     text-align: center;
+    /* line-height: 1.5; */
+    border-radius: 0.1em;
     background-color: #9EC544;
+}
+
+.material-icons {
+    font-size: 1.5em;
+    color: #FFF;
+}
+
+#year-controller > div > p {
+    margin: 0;
+    padding-top: 0.2em;
 }
 
 .year-sel {
     cursor: pointer;
-}
-
-.year{
-    /* font-size: 1vh; */
-    margin: 0px;
-    color: white;
-}
-
-.year-display {
 }
 
 .line {
@@ -100,12 +106,12 @@ br {
 
 .leaflet-popup-content-wrapper {
     border-radius: 0.2em;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.6);
+    color: #333;
+    background-color: rgba(255, 255, 255, 0.9);
 }
 
 .pophr {
-    border: 0.1em solid #FFF;
+    border: 0.1em solid #333;
 }
 footer {
     height: 8vh;

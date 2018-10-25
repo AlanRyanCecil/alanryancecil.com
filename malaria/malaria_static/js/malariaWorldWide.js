@@ -9,13 +9,20 @@ let malaria = {
     y: [],
     fill: 'tonexty',
     name: 'Malaria Cases',
-}
+};
 
 let population = {
     x: [],
     y: [],
     fill: 'tonexty',
     name: 'Population',
+};
+
+let layout = {
+    legend: {
+        // x: 1,
+        // y: 0.6,
+    },
 }
 
 d3.json('/malaria').then(data => {
@@ -28,6 +35,6 @@ d3.json('/malaria').then(data => {
         population.x.push(year.key);
         population.y.push(year.values.map(x => x.Population).reduce((a, b) => a + b));
     });
-    Plotly.newPlot('world-wide', [malaria, population]);
+    Plotly.newPlot('world-wide', [malaria, population], layout);
 });
 })();

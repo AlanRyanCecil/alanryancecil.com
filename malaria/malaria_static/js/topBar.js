@@ -14,7 +14,6 @@ var drawBars;
             };
             data.sort((a, b) => b[cases] - a[cases]);
             data.forEach(d => {
-                // trace.x.push(d['GDP/capita']);
                 trace.x.push(d['Country']);
                 trace.y.push(d[cases]);
                 trace.data.push('Alan');
@@ -26,6 +25,7 @@ var drawBars;
             title: 'Top Five Countries',
             titlefont: {
                 size: 24,
+                family: 'Oxygen',
             },
             xaxis: {
                 title: 'Country',
@@ -35,9 +35,8 @@ var drawBars;
             },
         };
     }
-    $('#bar-chart').on('plotly_hover', function(event) {
-        console.log(event);
-        console.log(event.target.offsetWidth);
+    $('#bar-chart').on('plotly_hover', function(data) {
+        console.log(data);
     });
     drawBars();
 })();

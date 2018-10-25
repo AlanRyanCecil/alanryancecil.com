@@ -1,21 +1,42 @@
 'use strict';
 
-var year = 2006;
+let year = 2006;
 let yearDisplay = d3.select('.year-display');
+let forward, backward;
+
+function playForward() {
+    forward = setInterval(function() {
+        year < 2013 ? year++ : null;
+        yearDisplay.text(year);
+        drawWorld();
+        drawBars();
+        scatter();
+        year == 2013 ? clearInterval(forward) : null;
+    }, 1000)
+}
+
+function playBack() {
+    backward = setInterval(function() {
+        year > 2006 ? year-- : null;
+        yearDisplay.text(year);
+        drawWorld();
+        drawBars();
+        scatter();
+        year == 2006 ? clearInterval(backward) : null;
+    }, 1000)
+}
+
+d3.select('.header').on('click', function() {
+    clearInterval(forward);
+    clearInterval(backward);
+});
+
 d3.select('.year-minus').on('click', function() {
-    year > 2006 ? year-- : null;
-    yearDisplay.text(year);
-    drawWorld();
-    drawBars();
-    scatter();
+    playBack();
 });
 
 d3.select('.year-plus').on('click', function() {
-    year < 2013 ? year++ : null;
-    yearDisplay.text(year);
-    drawWorld();
-    drawBars();
-    scatter();
+    playForward();
 });
 
 $('.btn').on('click', function(event) {

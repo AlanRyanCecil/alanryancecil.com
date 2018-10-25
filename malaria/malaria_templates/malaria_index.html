@@ -1,6 +1,18 @@
 {% extends 'malaria_base.html' %}
 {% block content %}
 <div class="row">
+    <div id="year-controller" class="offset-4 col-md-4">
+            <div class="row">
+                <p class="year-sel year-minus col-md-4">
+                    <i class="material-icons">arrow_left</i>
+                </p>
+                <p class="year-display col-md-4">2006</p>
+                <p class="year-sel year-plus col-md-4">
+                    <i class="material-icons">arrow_right</i>
+                </p>
+                <!-- <p class="year-sel year-plus col-md-4">></p> -->
+            </div>
+    </div>
     <div class="col-md-6">
         <h3 id="map-title">Malaria Cases per 100,000 Population</h3>
         <div id="world"></div>
@@ -10,11 +22,6 @@
     </div>
     <div class="col-md-12">
         <div id="gdp-scatter"></div>
-    </div>
-    <div id="year-controller" class="col-md-12">
-        <div class="year-control">
-            <p class="year"> <span class="year-sel year-minus">-</span> <span class="year-display">2006</span> <span class="year-sel year-plus">+</span> </p>
-        </div>
     </div>
     </div>
     <div id="highest"></div>
