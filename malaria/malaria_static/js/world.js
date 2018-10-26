@@ -1,12 +1,12 @@
 'use strict';
 
 var lightMap = L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
-    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-    maxZoom: 18,
-    id: 'mapbox.light',
-    accessToken: API_KEY
-}),
-drawWorld, geojson;
+        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+        maxZoom: 18,
+        id: 'mapbox.light',
+        accessToken: API_KEY
+    }),
+    drawWorld, geojson;
 
 lightMap.keep = true;
 
@@ -22,17 +22,7 @@ var world = L.map('world', {
         return Math.ceil(d['Malaria cases/100,000 pop.'] * (d.Population / 100000));
     }
 
-
-    var africa = 'malaria_static/json/africa_geo.json';
     let world_json = 'malaria_static/json/world.geojson';
-    var geoStyle = {
-        stroke: false,
-        color: '#000',
-        weight: 1,
-        fill: true,
-        fillColor: '#9FD341',
-        fillOpacity: 0.8
-    }
 
     function getValueProperty(feature, lookup) {
         try {
@@ -51,12 +41,6 @@ var world = L.map('world', {
         let countryLookUp = {};
 
         d3.json(world_json).then(function(geoData) {
-            L.geoJson(geoData, {
-                style: geoStyle,
-            }).bindPopup(function(layer) {
-                return layer.feature.properties.name_long;
-            });
-
             d3.json('/mapping-malaria/malaria').then(response => {
                 let data = response.filter(d => d.Year === year);
                 let capitalMarkers = [];
@@ -106,12 +90,14 @@ var world = L.map('world', {
                         fillOpacity: 0.5,
                     },
                     onEachFeature: function(feature, layer) {
-                        let popup = L.popup({autoPan: false})
+                        let popup = L.popup({
+                                autoPan: false
+                            })
                             .setContent(
-                            `<h6>${feature.properties.name}</h6>
+                                `<h6>${feature.properties.name}</h6>
                         <hr class="pophr">
                         <h6>recorded cases: ${formatThousands(getValueProperty(feature, countryLookUp))}</h6>`
-                        );
+                            );
                         layer.bindPopup(popup);
                         layer.on('mouseover', function(event) {
                             this.openPopup();
@@ -127,7 +113,7 @@ var world = L.map('world', {
                             });
                         });
                         layer.on('click', function(event) {
-                            world.fitBounds(this.getBounds());
+                            world.flyToBounds(this.getBounds());
                         });
                     }
                 });
@@ -137,13 +123,9 @@ var world = L.map('world', {
                     }
                 });
                 world.addLayer(geojson);
-                let baseMaps = {
-                };
-                let overlayMaps = {
-                    Capitals: capitals,
-                };
-                        });
-                    });
-                }
-                drawWorld();
+            });
+        });
+    }
+
+    drawWorld();
 })();
