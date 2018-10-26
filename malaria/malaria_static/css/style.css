@@ -2,6 +2,18 @@ body {
     font-family: 'Oxygen', sans-serif;
 }
 
+hr {
+    border: 0.1em solid #333;
+}
+
+br {
+    margin: 18vh;
+}
+
+#head-space {
+    height: 8vh;
+}
+
 .header {
     position: fixed;
     top: 0px;
@@ -11,18 +23,14 @@ body {
     z-index: 10000;
 }
 
-.section-heading {
-    margin-top: 10vh;
-}
-
-#head-space {
-    height: 8vh;
-}
-
 #page-title {
     color: #333;
     text-align: center;
     padding-top: 0.5em;
+}
+
+.section-heading {
+    margin-top: 10vh;
 }
 
 
@@ -31,20 +39,13 @@ body {
 }
 
 .scroll-anchor {
-    margin-top: 2vh;
+    margin-top: 2.5vh;
+    padding: 0.1em 0.5em 0.13em 0.5em;
 }
 
 .map-heading {
     margin-top: 8vh;
     text-align: center;
-}
-
-hr {
-    border: 0.1em solid #333;
-}
-
-br {
-    margin: 18vh;
 }
 
 #map-title {
@@ -75,6 +76,7 @@ br {
 
 #year-controller {
     margin-top: 1vh;
+    padding: 0;
     color: white;
     font-size: 2em;
     text-align: center;
@@ -87,13 +89,14 @@ br {
     color: #FFF;
 }
 
-#year-controller > div > p {
+.year-sel {
     margin: 0;
     padding-top: 0.2em;
+    cursor: pointer;
 }
 
-.year-sel {
-    cursor: pointer;
+.year-sel:hover, .material-icons:hover {
+    color: #444;
 }
 
 .line {
@@ -119,11 +122,6 @@ br {
 
 .pophr {
     border: 1px solid #333;
-}
-
-.text-btn {
-    margin-top: 0.5em;
-    margin-left: 9em;
 }
 
 .learn-btn {
