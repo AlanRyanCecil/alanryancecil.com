@@ -5,6 +5,8 @@ let yearDisplay = $('#year-display');
 let forward, backward;
 
 function playForward() {
+    clearInterval(forward);
+    clearInterval(backward);
     forward = setInterval(function() {
         year < 2013 ? year++ : null;
         yearDisplay.text(year);
@@ -16,6 +18,8 @@ function playForward() {
 }
 
 function playBack() {
+    clearInterval(forward);
+    clearInterval(backward);
     backward = setInterval(function() {
         year > 2006 ? year-- : null;
         yearDisplay.text(year);

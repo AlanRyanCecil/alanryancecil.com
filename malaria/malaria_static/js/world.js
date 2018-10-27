@@ -12,7 +12,7 @@ lightMap.keep = true;
 
 var world = L.map('world', {
     center: [3, 16.845402],
-    zoom: 2,
+    zoom: 1,
     layers: [lightMap],
 });
 

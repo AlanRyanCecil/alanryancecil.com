@@ -1,12 +1,15 @@
 body {
     background-color: ##DBDEEE;
     /* background: linear-gradient(0deg, #909985, #25311C); */
-    color: #DDD;
+    color: #000;
 }
 
-.header-content {
-    margin-left: 8em;
-    padding: 2em;
+header {
+    position: fixed;
+    top: 0;
+    padding: 1em;
+    background-color: #000;
+    z-index: 100000;
 }
 
 .card {
