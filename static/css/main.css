@@ -1,16 +1,64 @@
 body {
-    background-color: ##DBDEEE;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #111;
     /* background: linear-gradient(0deg, #909985, #25311C); */
-    color: #000;
+    color: #FFF;
+    /* background-image: url('../images/spiral.jpg'); */
+}
+
+.head-space {
+    height: 10vh;
 }
 
 header {
     position: fixed;
     top: 0;
-    padding: 1em;
-    background-color: #000;
-    z-index: 100000;
+    width: 100vw;
+    padding: 2.4vh 2vw 3vh 4vw;
+    background-color: #111;
+    z-index: 10000;
 }
+
+.header-title {
+    margin: 0;
+    font-size: 1.2vw;
+    font-weight: 300;
+}
+
+.container {
+    margin: 5vw 5vw 5vw 5vw;
+}
+
+.project-section {
+    height: 36vw;
+    width: 90vw;
+}
+
+.project-image {
+    float: left;
+    margin-right: 5vw;
+}
+
+.project-description {
+    width: 80vw;
+    font-weight: 100;
+}
+
+.project-link {
+    width: 16vw;
+    color: #AAA;
+}
+
+.project-link:hover {
+    color: #777;
+}
+
+a:hover {
+    text-decoration: none
+}
+
+
+
 
 .card {
     padding: 0;

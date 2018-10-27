@@ -1,54 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Alan Cecil</title>
-        <link rel="shortcut icon" href="static/images/favicon.ico">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-        <link rel="stylesheet" href="static/css/main.css">
-    </head>
-    <body>
-        <header>
-            <h1>Alan Cecil</h1>
-        </header>
-        <hr>
-        <div class="container">
-            <div class="card-columnsx">
-  <!--               <div class="card">
-                    <a href="/latitude" target="_blank"><img class="card-img-top project-img" src="static/images/latitude_analysis.png" alt="Card image cap"></a>
-                    <div class="card-body">
-                        <h5 class="card-title">Latitude Analysis</h5>
-                        <hr>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <a href="aliens" target="_blank"><img class="card-img-top project-img" src="static/images/alien_encounters.png" alt="Card image cap"></a>
-                    <div class="card-body">
-                        <h5 class="card-title">Alien Encounters</h5>
-                        <hr>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <a href="mars" target="_blank"><img class="card-img-top project-img" src="static/images/mission_to_mars.png" alt="Card image cap"></a>
-                    <div class="card-body">
-                        <h5 class="card-title">Mission to Mars</h5>
-                        <hr>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                </div> -->
-                <a href="/latitude" target="_blank"><h3>Latitude</h3></a>
-                <a href="/health" target="_blank"><h3>Health</h3></a>
-                <a href="/aliens" target="_blank"><h3>Aliens</h3></a>
-                <a href="mars" target="_blank"><h3>Mars</h3></a>
-                <a href="tictactoe" target="_blank"><h3>Tic-Tac-Toe</h3></a>
-            </div>
-        </div>
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
-
-    </body>
-</html>
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <div class="project-section">
+        <a href="/latitude" target="_blank">
+            <img src="static/images/latitude_analysis.png" class="project-image">
+        </a>
+        <h3 class="project-title">Latitude</h3>
+        <p class="project-description">Engine bomb decay soul-delay smart-crypto-chrome dolphin denim camera paranoid.</p>
+    </div>
+    <div class="project-section">
+        <a href="/mars" target="_blank">
+            <img src="static/images/mission_to_mars.png" class="project-image">
+        </a>
+        <h3 class="project-title">Mission to Mars</h3>
+        <p class="project-description">Engine bomb decay soul-delay smart-crypto-chrome dolphin denim camera paranoid.</p>
+    </div>
+    <div class="project-section">
+        <a href="/health" target="_blank">
+            <img src="static/images/health_demographics.png" class="project-image">
+        </a>
+        <h3 class="project-title">Health Demographics</h3>
+        <p class="project-description">Plastic towards drone grenade car bridge faded corrupted ablative BASE jump tanto soul-delay.</p>
+    </div>
+    <div class="project-section">
+        <a href="/aliens" target="_blank">
+            <img src="static/images/alien_encounters.png" class="project-image">
+        </a>
+        <h3 class="project-title">Alien Encounters</h3>
+        <p class="project-description">Cyber-paranoid decay dead euro-pop footage futurity market meta-long-chain hydrocarbons shrine.</p>
+    </div>
+    <div class="project-section">
+        <a href="/tictactoe" target="_blank">
+            <img src="static/images/tic_tac_toe.png" class="project-image">
+        </a>
+        <h3 class="project-title">Tic Tac Toe</h3>
+        <p class="project-description">Monofilament free-market disposable city San Francisco paranoid lights. Table footage into man fluidity render-farm artisanal crypto-dolphin knife media towards warehouse network motion marketing cyber. Skyscraper modem range-rover vehicle numinous boy computer BASE jump network. Rain engine camera free-market systemic modem crypto-narrative faded dead katana bridge smart.</p>
+    </div>
+</div>
+{% endblock %}

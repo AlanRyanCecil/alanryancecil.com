@@ -17,7 +17,7 @@ def home():
     mars = collection.find_one()
     if mars == None:
         return render_template('204.html')
-    return render_template('mars.html', mars=mars)
+    return render_template('mars_index.html', mars=mars)
 
 
 @mars.route('/mars/scrape')
