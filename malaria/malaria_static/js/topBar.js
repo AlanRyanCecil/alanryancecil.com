@@ -9,14 +9,12 @@ var drawBars;
             let trace = {
                 x: [],
                 y: [],
-                latlng: [],
                 type: 'bar',
             };
             data.sort((a, b) => b[cases] - a[cases]);
             data.forEach(d => {
                 trace.x.push(d['Country']);
                 trace.y.push(d[cases]);
-                trace.latlng.push(L.latLng(d['Latitude Number'], d['Longitude Number']));
             });
             Plotly.newPlot('bar-chart', [trace], layout);
         });
@@ -36,14 +34,10 @@ var drawBars;
         };
     }
     $('#bar-chart').on('plotly_click', function(x, event) {
-        let data = event.points[0],
-            index = data.pointIndex,
-            name = data.x,
-            latlng = data.data.latlng[index];
+        let name = event.points[0].x;
         name !== "Cote d'Ivoire" ? name : name = 'Ivory Coast';
         let country = geojson.getLayers()
                 .filter(x => x.feature.properties.name === name)[0];
-        world.flyTo(latlng);
         world.flyToBounds(country.getBounds());
         country.openPopup();
     });

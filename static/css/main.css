@@ -1,8 +1,8 @@
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #111;
+    background-color: #161616;
     /* background: linear-gradient(0deg, #909985, #25311C); */
-    color: #FFF;
+    color: #DDD;
     /* background-image: url('../images/spiral.jpg'); */
 }
 
@@ -14,24 +14,43 @@ header {
     position: fixed;
     top: 0;
     width: 100vw;
-    padding: 2.4vh 2vw 3vh 4vw;
+    padding: 2vh 4vw 2vh 4vw;
     background-color: #111;
-    z-index: 10000;
 }
 
-.header-title {
+a, a:hover {
+    color: #DDD;
+    text-decoration: none
+}
+
+.header-content {
+    display: inline;
     margin: 0;
-    font-size: 1.2vw;
+    padding: 0;
     font-weight: 300;
 }
 
+.header-content.title {
+    font-size: 1.2vw;
+    /* float: left; */
+}
+
+.header-content.navigation {
+    float: right;
+    list-style: none;
+}
+
+.navigation.item {
+    float: left;
+}
+
 .container {
-    margin: 5vw 5vw 5vw 5vw;
+    margin: 5vw 9vw 5vw 9vw;
 }
 
 .project-section {
     height: 36vw;
-    width: 90vw;
+    /* width: 90vw; */
 }
 
 .project-image {
@@ -42,6 +61,8 @@ header {
 .project-description {
     width: 80vw;
     font-weight: 100;
+    text-align: justify;
+    /* text-justify: inter-word; */
 }
 
 .project-link {
@@ -50,11 +71,7 @@ header {
 }
 
 .project-link:hover {
-    color: #777;
-}
-
-a:hover {
-    text-decoration: none
+    color: #111;
 }
 
 
@@ -74,15 +91,16 @@ a:hover {
     /* width: 100%; */
 }
 
-hr {
-    margin-top: 0;
-    border: solid #DDD 0.1em;
+footer {
+    width: 100%;
+    padding: 2vh;
+    text-align: center;
+    background-color: #111;
 }
 
-#bg-svg {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(32deg, #7D8574, #2C3D2D, #0B1513);
-    z-index: -1;
+.footer-content {
+    display: inline;
+    color: #DDD;
+    padding: 0;
+    margin: 0;
 }
