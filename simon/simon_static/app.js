@@ -109,7 +109,7 @@ angular.module('SimonSaysApp', ['ngMaterial'])
                     indicator = new THREE.Mesh(new THREE.SphereGeometry(0.016, 16, 16),
                         new THREE.MeshPhongMaterial({color: 0x015602}));
 
-                    objLoader.load('simonSays.json', function (blender) {
+                    objLoader.load('simon_static/simonSays.json', function (blender) {
                         blender.getObjectByName('lattice').material = new THREE.MeshLambertMaterial({color: 0x0A0A0A});
                         blender.getObjectByName('powerBG').material = new THREE.MeshPhongMaterial({color: 0x222222});
                         blender.getObjectByName('table').material = new THREE.MeshPhongMaterial({color: 0x436883});

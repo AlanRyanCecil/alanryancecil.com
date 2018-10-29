@@ -2,7 +2,7 @@ from flask import Blueprint, render_template, abort
 from jinja2 import TemplateNotFound
 
 latitude = Blueprint('latitude', __name__,
-                     template_folder='templates', static_folder='static/resource')
+                     template_folder='latitude_templates', static_folder='latitude_static')
 
 
 @latitude.route('/latitude')
