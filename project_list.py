@@ -1,7 +1,7 @@
 projects = [
     {
         'title': 'Mapping Malaria',
-        'description': 'A Python Flask app representing global malaria data from <a class="description-link" href="http://www.worldbank.org" target="_blank">The World Bank</a> using D3.js - Plotly.js and Leaflet to create the visualisations.',
+        'description': 'A Python Flask app representing global malaria data from <a class="description-link" href="http://www.worldbank.org" target="_blank">The World Bank</a> using D3.js - Plotly.js and Leaflet to create interactive visualisations.',
         'route': '/mapping-malaria',
         'image': 'static/images/mapping_malaria.png',
     },
