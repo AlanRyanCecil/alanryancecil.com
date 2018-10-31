@@ -91,3 +91,11 @@ footer {
     padding: 0;
     margin: 0;
 }
+
+.fa {
+    padding: 5px;
+    margin: 0 0.6em 0 0.6em;
+    font-size: 1.6vw;
+    background-color: #161616;
+    color: #DDD;
+}
