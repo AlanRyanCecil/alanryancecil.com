@@ -1,0 +1,188 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #DDD;
+    background-color: #161616;
+}
+
+#head-space {
+    height: 10vh;
+}
+
+#BG {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    background-image: url('../images/spiral.jpg');
+    z-index: -1;
+}
+
+#landing-space {
+    height: 100vh;
+    width: 60vw;
+    margin: 30vh auto 50vh auto;
+}
+
+#about-content {
+    /* text-align: center; */
+    padding: 3vw;
+    /* border: 0.16em solid rgba(255, 255, 255, 0.16); */
+    border-radius: 0.3em;
+    /* background-color: rgba(0, 0, 0, 0.2); */
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    padding: 2vh 4vw 2vh 4vw;
+    background-color: #111;
+}
+
+h3 {
+    font-size: 1.75em;
+    font-weight: 300;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: #8AF;
+    text-decoration: none;
+    transition: all 0.15s ease-in;
+}
+
+.nav-link {
+    color: #DDD;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    color: #8AF;
+    text-decoration: none;
+}
+
+.header-content {
+    display: inline;
+    margin: 0;
+    padding: 0;
+    font-weight: 300;
+}
+
+.header-content.title {
+    font-size: 1.2vw;
+}
+
+.header-content.navigation {
+    float: right;
+    list-style: none;
+}
+
+.navigation.item {
+    float: left;
+}
+
+.container {
+    margin: 5vw 9vw 5vw 9vw;
+}
+
+.project-section {
+    display: inline-block;
+    /* height: 36vw; */
+    /* padding: 10vw; */
+    padding: 2vh 0 8vh 0;
+}
+
+.project-image {
+    float: left;
+    margin-right: 5vw;
+    border: 0.16em solid rgba(0, 0, 0, 0);
+    transition: all 0.1s ease-in;
+}
+
+.description-section {
+    display: inline;
+}
+
+.project-title {
+    /* clear: right; */
+}
+
+.project-description {
+    /* clear: both; */
+}
+
+.project-image:hover {
+    border: 0.16em solid #F32;
+}
+
+.project-title {
+}
+
+.project-description {
+    color: #BBB;
+    width: 80vw;
+    font-weight: 100;
+    text-align: justify;
+}
+
+.description-link {
+    color: #8AF;
+}
+
+.description-link:hover {
+    color: #DDD;
+    /* text-decoration: none; */
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    padding: 1vh;
+    text-align: center;
+    background-color: #111;
+}
+
+.footer-content {
+    display: inline;
+    color: #DDD;
+    padding: 0;
+    margin: 0;
+}
+
+.fa {
+    padding: 5px;
+    margin: 0 1em 0 1em;
+    font-size: 1.6vw;
+    background-color: #161616;
+    color: #DDD;
+}
+
+@media only screen and (max-width: 1200px) {
+    .container {
+        margin: auto;
+    }
+
+    .project-section {
+        /* display: none; */
+    }
+
+    .project-titlex, .project-descriptionx {
+        display: none;
+    }
+
+    .project-title {
+        /* margin-top: 200px; */
+    }
+
+    .project-description {
+        width: 90%
+    }
+
+    .project-image: {
+        padding: 20vh;
+    }
+}
