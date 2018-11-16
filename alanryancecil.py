@@ -11,7 +11,6 @@ from simon.simon import simon
 
 from project_list import projects
 
-
 app = Flask(__name__)
 
 app.register_blueprint(latitude)

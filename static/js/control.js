@@ -1,26 +1,45 @@
 'use strict';
 
 (function($) {
+    let about = $('#about-link'),
+        about_me = $('#about-me-section'),
+        landing_statement = $('#landing-statement'),
+        portfolio = $('#portfolio-link'),
+        contact = $('#contact-link'),
+        duration = 600;
+
     function scrollToTarget(that, event) {
         event.preventDefault();
         $('html, body').animate({
             scrollTop: $(that.hash).offset().top
-        }, 600);
+        }, duration);
     }
-    let about = $('#about-link'),
-        portfolio = $('#portfolio-link'),
-        contact = $('#contact-link');
+
+    function hideAbout() {
+        about_me.fadeOut(duration);
+        landing_statement.animate({opacity: 1}, duration);
+    }
+
+    $('body').on('click', function(event) {
+        if (event.target.id !== 'about-link') {
+            hideAbout();
+        }
+    });
 
     about.on('click', function(event) {
         scrollToTarget(this, event);
+        about_me.fadeIn(duration);
+        landing_statement.animate({opacity: 0}, duration);
     });
 
     portfolio.on('click', function(event) {
         scrollToTarget(this, event);
+        hideAbout();
     });
 
     contact.on('click', function(event) {
         scrollToTarget(this, event);
+        hideAbout();
     });
 
 
@@ -41,8 +60,6 @@
         BG.css({opacity: opacity});
 
     });
-
-
 
 console.log(window.innerWidth);
 
