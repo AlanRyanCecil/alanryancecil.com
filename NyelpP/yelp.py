@@ -58,7 +58,7 @@ def getTokens(name, star):
         text = ' '.join(ds['text'][:300])
     else:
         text = ' '.join(ds.loc[ds['stars'] == int(star), 'text'][:300])
-    summary = re.sub('\n', ' ', summarize(text[:200000], word_count=300))
+    summary = re.sub('\n', ' ', summarize(text[:20000], word_count=300))
     doc = nlp(summary)
     response = ''
     for tok in doc:
@@ -72,20 +72,13 @@ def getTokens(name, star):
     return jsonify({'summary': response.strip()})
 
 
-@yelp.route('/n-yelp-p/test')
-def test():
-    with open('../cleaned_data/test_response.txt', 'r') as read:
-        data = read.read()
-    return jsonify({'summary': data})
-
-
 @yelp.route('/n-yelp-p/wordcloud/<name>/<star>')
 def make_wordcloud(name, star):
     ds = df.loc[df['name'] == name].sort_values('date', ascending=False)
     if star == '0':
         reviews = ' '.join(ds['text'][:300])
     else:
-        reviews = ' '.join(ds.loc[ds['stars'] == int(star), 'text'][:300])
+        reviews = ' '.join(ds.loc[ds['stars'] == int(star), 'text'][:100])
     doc = nlp(reviews)
     text = [t.text for t in doc if t.pos_ == 'NOUN']
     freq_dict = {}
