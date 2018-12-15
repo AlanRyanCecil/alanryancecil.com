@@ -87,7 +87,7 @@ def make_wordcloud(name, star):
             continue
         val = freq_dict.get(word, 0)
         freq_dict[word.lower()] = val + 1
-    wc = WordCloud(width=600, height=300, background_color="white", max_words=2000)
+    wc = WordCloud(width=400, height=200, background_color="white", max_words=500)
     wc.generate_from_frequencies(freq_dict)
     wc.to_file('NyelpP/yelp_static/images/wordcloud.png')
     return jsonify({'success': True})
