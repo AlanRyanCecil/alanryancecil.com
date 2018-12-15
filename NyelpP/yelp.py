@@ -58,7 +58,7 @@ def getTokens(name, star):
         text = ' '.join(ds['text'][:300])
     else:
         text = ' '.join(ds.loc[ds['stars'] == int(star), 'text'][:300])
-    summary = re.sub('\n', ' ', summarize(text[:20000], word_count=300))
+    summary = re.sub('\n', ' ', summarize(text[:100000], word_count=300))
     doc = nlp(summary)
     response = ''
     for tok in doc:
