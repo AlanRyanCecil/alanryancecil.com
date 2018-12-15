@@ -7,6 +7,7 @@ from health.health import health
 from tictactoe.tictactoe import tictactoe
 from malaria.malaria import malaria
 from simon.simon import simon
+from NyelpP.yelp import yelp
 # from belly.belly import belly
 
 from project_list import projects
@@ -20,6 +21,7 @@ app.register_blueprint(health)
 app.register_blueprint(tictactoe)
 app.register_blueprint(malaria)
 app.register_blueprint(simon)
+app.register_blueprint(yelp)
 # app.register_blueprint(belly)
 
 
