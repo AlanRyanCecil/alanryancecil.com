@@ -58,7 +58,7 @@ def getTokens(name, star):
         text = ' '.join(ds['text'][:300])
     else:
         text = ' '.join(ds.loc[ds['stars'] == int(star), 'text'][:300])
-    summary = re.sub('\n', ' ', summarize(text[:100000], word_count=300))
+    summary = re.sub('\n', ' ', summarize(text[:70000], word_count=300))
     doc = nlp(summary)
     response = ''
     for tok in doc:
@@ -87,7 +87,7 @@ def make_wordcloud(name, star):
             continue
         val = freq_dict.get(word, 0)
         freq_dict[word.lower()] = val + 1
-    wc = WordCloud(width=400, height=200, background_color="white", max_words=500)
+    wc = WordCloud(width=600, height=300, background_color="white", max_words=500)
     wc.generate_from_frequencies(freq_dict)
     wc.to_file('NyelpP/yelp_static/images/wordcloud.png')
     return jsonify({'success': True})
