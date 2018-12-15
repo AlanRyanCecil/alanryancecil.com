@@ -55,7 +55,7 @@ def businessid(bid):
 def getTokens(name, star):
     ds = df.loc[df['name'] == name].sort_values('date', ascending=False)
     if star == '0':
-        text = ' '.join(ds['text'][:300])
+        text = ' '.join(ds['text'][:200])
     else:
         text = ' '.join(ds.loc[ds['stars'] == int(star), 'text'][:300])
     summary = re.sub('\n', ' ', summarize(text[:70000], word_count=300))
@@ -76,10 +76,10 @@ def getTokens(name, star):
 def make_wordcloud(name, star):
     ds = df.loc[df['name'] == name].sort_values('date', ascending=False)
     if star == '0':
-        reviews = ' '.join(ds['text'][:300])
+        reviews = ' '.join(ds['text'][:200])
     else:
-        reviews = ' '.join(ds.loc[ds['stars'] == int(star), 'text'][:100])
-    doc = nlp(reviews)
+        reviews = ' '.join(ds.loc[ds['stars'] == int(star), 'text'][:300])
+    doc = nlp(reviews[:70000])
     text = [t.text for t in doc if t.pos_ == 'NOUN']
     freq_dict = {}
     for word in text:
