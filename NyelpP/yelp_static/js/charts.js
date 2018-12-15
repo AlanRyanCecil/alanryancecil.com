@@ -2,9 +2,6 @@
 
 let category_elem = document.getElementById('business-categories'),
     star_plot = document.getElementById('star-bar-plot'),
-    // pie_chart = document.getElementById('star-pie-chart'),
-    // vader_bubble_chart = document.getElementById('vader-bubble-chart'),
-    // vader_plot = document.getElementById('vader-plot'),
     review_section = $('#review-section'),
     sum_sect = $('#summary-section'),
     current_business, current_reviews,
@@ -18,11 +15,9 @@ $('.dropdown-item').on('click', function(event) {
     current_star = 0;
     review_page = 0;
     keyword = null;
-    console.log(current_business);
     d3.json('/n-yelp-p/data/' + current_business).then(function(response) {
         data = response;
         data.forEach(x => x.date = new Date(x.date));
-        console.log(data[0]);
         draw_twoAxis_bubbles(data);
         setMapLocation(data[0].business_id);
         categories = data[0].categories
@@ -37,8 +32,6 @@ $('.dropdown-item').on('click', function(event) {
         populateReviewSection();
         writeSummary();
         generateWordcloud();
-
-
 
         let star_list = [0, 0, 0, 0, 0];
         data.forEach(x => star_list[x.stars - 1] += 1);
@@ -150,7 +143,7 @@ $('.last-btn, .next-btn').on('click', function(event) {
     event.preventDefault();
     if (this.hash !== '') {
         $('html, body').animate({
-            scrollTop: $(this.hash).offset().top * 1.1
+            scrollTop: $(this.hash).offset().top * 1.05
         }, 500);
     }
 
