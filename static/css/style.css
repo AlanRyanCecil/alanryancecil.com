@@ -23,6 +23,15 @@ body {
     margin: 30vh auto 50vh auto;
 }
 
+#resume-section {
+    display: none;
+}
+
+#resume {
+    height: 100vh;
+    z-index: -1;
+}
+
 #about-content {
     /* text-align: center; */
     padding: 3vw;

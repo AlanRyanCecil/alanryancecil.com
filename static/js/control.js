@@ -2,6 +2,8 @@
 
 (function($) {
     let about = $('#about-link'),
+        resume_link = $('#resume-link'),
+        resume = $('#resume-section'),
         about_me = $('#about-me-section'),
         landing_statement = $('#landing-statement'),
         portfolio = $('#portfolio-link'),
@@ -17,29 +19,42 @@
 
     function hideAbout() {
         about_me.fadeOut(duration);
+        resume.fadeOut(duration);
         landing_statement.animate({opacity: 1}, duration);
     }
 
     $('body').on('click', function(event) {
+        console.log($(event.target));
         if (event.target.id !== 'about-link') {
             hideAbout();
         }
     });
 
-    about.on('click', function(event) {
+    portfolio.on('click', function(event) {
         scrollToTarget(this, event);
-        about_me.fadeIn(duration);
+        // hideAbout();
+        about_me.fadeOut(duration);
+        resume.fadeOut(duration);
+        landing_statement.animate({opacity: 1}, duration);
+    });
+
+    resume_link.on('click', function(event) {
+        scrollToTarget(this, event);
+        resume.fadeIn(duration);
+        about_me.fadeOut(duration);
         landing_statement.animate({opacity: 0}, duration);
     });
 
-    portfolio.on('click', function(event) {
+    about.on('click', function(event) {
         scrollToTarget(this, event);
-        hideAbout();
+        about_me.fadeIn(duration);
+        resume.fadeOut(duration);
+        landing_statement.animate({opacity: 0}, duration);
     });
 
     contact.on('click', function(event) {
         scrollToTarget(this, event);
-        hideAbout();
+        // hideAbout();
     });
 
 
