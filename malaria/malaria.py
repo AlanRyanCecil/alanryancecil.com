@@ -1,8 +1,8 @@
 from flask import Blueprint, jsonify, render_template
 import pandas as pd
-import pymongo
+# import pymongo
 
-from .scrape_info import scrape_charity_data
+# from .scrape_info import scrape_charity_data
 
 
 malaria = Blueprint('mapping-malaria', __name__,
@@ -11,11 +11,12 @@ malaria = Blueprint('mapping-malaria', __name__,
 
 @malaria.route('/mapping-malaria')
 def home():
-    client = pymongo.MongoClient('mongodb://localhost:27017')
-    db = client.charities_db
-    collection = db.charities
-    scrape_charity_data()
-    charity_data = collection.find()
+    # client = pymongo.MongoClient('mongodb://localhost:27017')
+    # db = client.charities_db
+    # collection = db.charities
+    # scrape_charity_data()
+    # charity_data = collection.find()
+    charity_data = [{'text': 'Give Effectively', 'link': 'https://www.givewell.org/giving'}]
     charities = [{'text': char['text'], 'link': char['link']} for char in charity_data]
     return render_template('malaria_index.html', charities=charities)
 
