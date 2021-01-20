@@ -11,7 +11,6 @@ collection = db.mars
 mars = Blueprint('mars', __name__,
     template_folder='mars_templates', static_folder='mars_static')
 
-
 @mars.route('/mars')
 def home():
     mars = collection.find_one()
@@ -22,8 +21,8 @@ def home():
 
 @mars.route('/mars/scrape')
 def call_scrape():
-    # collection.drop()
-    # collection.insert_one(scrape())
+    collection.drop()
+    collection.insert_one(scrape())
     return redirect('/mars', code=302)
 
 if __name__ == '__main__':
