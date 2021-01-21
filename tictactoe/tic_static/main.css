@@ -31,7 +31,7 @@ body {
     position: absolute;
     width: 32vw;
     height: 32vw;
-    background-image: url('https://images.freecreatives.com/wp-content/uploads/2016/01/Crumpled-White-Paper-Texture.jpg');
+    background-image: url('paper.jpg');
     background-size: cover;
 }
 
@@ -40,7 +40,7 @@ body {
     width: 32vw;
     height: 32vw;
     opacity: .85;
-    background-image: url('http://react-tictactoe.stefanwille.com/images/grid.png');
+    background-image: url('grid.png');
     background-size: cover;
 }
 
@@ -76,7 +76,7 @@ body {
 }
 
 .md-dialog-content {
-    background-image: url('https://images.freecreatives.com/wp-content/uploads/2016/01/Crumpled-White-Paper-Texture.jpg');
+    background-image: url('paper.jpg');
 }
 
 .md-title {
