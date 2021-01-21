@@ -51,7 +51,7 @@ angular.module('SimonSaysApp', ['ngMaterial'])
                     illuminated = false,
                     buttonTone,
                     powerSwitch, startButton, modeButton,
-                    opperationButtonMap,
+                    operationButtonMap,
                     playButtonMap,
                     labelMaterial,
                     computerPlay,
@@ -164,7 +164,7 @@ angular.module('SimonSaysApp', ['ngMaterial'])
                         return intersects[0].object;
                     }
 
-                    function powerOpperation () {
+                    function powerOperation () {
                         powerChange = powerOn ? powerChangeAbs : -powerChangeAbs;
                         powerChanged = 0;
                         strictModeOn ? changeMode() : null;
@@ -203,7 +203,7 @@ angular.module('SimonSaysApp', ['ngMaterial'])
                     }
 
                     function randomColor () {
-                        return ['green', 'red', 'blue', 'yellow'][Math.floor(Math.random() * 4)];
+                        return ['green', 'red', 'blue', 'yellow'][Math.floor(Math.random() * 1)];
                     }
 
                     function computerPlay (addColor) {
@@ -298,9 +298,9 @@ angular.module('SimonSaysApp', ['ngMaterial'])
                         }
                     }
 
-                    function opperationButtonEvent (object) {
+                    function operationButtonEvent (object) {
                         if (object === 'powerSwitch') {
-                            powerOpperation();
+                            powerOperation();
                         }
                         if (object === 'startButton') {
                             computerPlay(true);
@@ -330,7 +330,7 @@ angular.module('SimonSaysApp', ['ngMaterial'])
                             'yellow': 'yellow',
                             'blue': 'blue'
                         }
-                        opperationButtonMap = {
+                        operationButtonMap = {
                             'o': 'powerSwitch',
                             ' ': 'startButton',
                             'm': 'modeButton',
@@ -340,8 +340,8 @@ angular.module('SimonSaysApp', ['ngMaterial'])
                         }
                         if (playButtonMap.hasOwnProperty(key)) {
                             playButtonEvent(playButtonMap[key]);
-                        } else if (opperationButtonMap.hasOwnProperty(key)) {
-                            opperationButtonEvent(opperationButtonMap[key]);
+                        } else if (operationButtonMap.hasOwnProperty(key)) {
+                            operationButtonEvent(operationButtonMap[key]);
                         }
                     }
 
